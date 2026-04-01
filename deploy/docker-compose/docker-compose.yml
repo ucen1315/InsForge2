@@ -54,7 +54,7 @@ services:
       postgres:
         condition: service_healthy
       postgrest:
-        condition: service_healthy
+        condition: service_started
     ports:
       - "${APP_PORT:-7130}:7130"
       - "${AUTH_PORT:-7131}:7131"
